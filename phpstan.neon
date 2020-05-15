@@ -1,0 +1,5 @@
+parameters:
+	reportUnmatchedIgnoredErrors: true
+
+	excludes_analyse:
+		- 'src/DependencyInjection/Configuration.php'

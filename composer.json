@@ -1,0 +1,60 @@
+{
+    "name": "setono/php-templates-bundle",
+    "type": "symfony-bundle",
+    "description": "A Symfony bundle that integrates the php templates library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joachim Løvgaard",
+            "email": "joachim@loevgaard.dk"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "setono/php-templates": "^1.0@dev",
+        "symfony/config": "^4.4 || ^5.0",
+        "symfony/dependency-injection": "^4.4 || ^5.0",
+        "symfony/framework-bundle": "^4.4 || ^5.0"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.2",
+        "korbeil/phpstan-generic-rules": "^0.2.4",
+        "matthiasnoback/symfony-dependency-injection-test": "^4.1",
+        "phpstan/phpstan": "^0.12.23",
+        "phpstan/phpstan-strict-rules": "^0.12.2",
+        "phpunit/phpunit": "^8.5",
+        "roave/security-advisories": "dev-master",
+        "sylius-labs/coding-standard": "^3.1",
+        "thecodingmachine/phpstan-safe-rule": "^1.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.4-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Setono\\PhpTemplatesBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Setono\\PhpTemplatesBundle\\Tests\\": "tests/"
+        }
+    },
+    "prefer-stable": true,
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse -c phpstan.neon -l max src/",
+        "check-style": "vendor/bin/ecs check src/ tests/",
+        "fix-style": "vendor/bin/ecs check --fix src/ tests/",
+        "phpspec": "vendor/bin/phpspec run",
+        "phpunit": "vendor/bin/phpunit",
+        "test": [
+            "@phpspec",
+            "@phpunit"
+        ]
+    }
+}
