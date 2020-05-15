@@ -12,7 +12,6 @@
     "require": {
         "php": "^7.2",
         "setono/php-templates": "^1.0@dev",
-        "symfony/config": "^4.4 || ^5.0",
         "symfony/dependency-injection": "^4.4 || ^5.0",
         "symfony/framework-bundle": "^4.4 || ^5.0"
     },
