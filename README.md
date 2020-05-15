@@ -32,7 +32,36 @@ return [
 ```
 
 ## Usage
-TODO
+### Service usage
+The bundle registers the service `setono_php_templates.engine.default` and also autowires the interface
+`Setono\PhpTemplates\Engine\EngineInterface` to that default engine. This means you can inject the engine just by
+type hinting the interface:
+
+```php
+<?php
+use Setono\PhpTemplates\Engine\EngineInterface;
+
+final class YourService
+{
+    /** @var EngineInterface */
+    private $engine;
+
+    public function __construct(EngineInterface $engine) {
+        $this->engine = $engine;
+    }
+
+    public function __invoke(): string
+    {
+        return $this->engine->render('YourNamespace/template', [
+            'parameter' => 'value'
+        ]);
+    }
+}
+```
+
+### Templates
+The bundle automatically adds paths to the template engine. It is predefined to `src/Resources/views/php` for bundles
+and `templates/php` for applications.
 
 [ico-version]: https://poser.pugx.org/setono/php-templates-bundle/v/stable
 [ico-unstable-version]: https://poser.pugx.org/setono/php-templates-bundle/v/unstable
