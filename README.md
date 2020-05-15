@@ -64,6 +64,9 @@ final class YourService
 The bundle automatically adds paths to the template engine. It is predefined to `src/Resources/views/php` for bundles
 and `templates/php` for applications.
 
+This means if you put templates (according the [correct structure](https://github.com/Setono/php-templates#usage)) you can use templates seamlessly as described in the
+original [docs](https://github.com/Setono/php-templates).
+
 [ico-version]: https://poser.pugx.org/setono/php-templates-bundle/v/stable
 [ico-unstable-version]: https://poser.pugx.org/setono/php-templates-bundle/v/unstable
 [ico-license]: https://poser.pugx.org/setono/php-templates-bundle/license
