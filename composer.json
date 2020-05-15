@@ -20,6 +20,8 @@
         "ergebnis/composer-normalize": "^2.2",
         "korbeil/phpstan-generic-rules": "^0.2.4",
         "matthiasnoback/symfony-dependency-injection-test": "^4.1",
+        "nyholm/symfony-bundle-test": "^1.6",
+        "phpstan/extension-installer": "^1.0",
         "phpstan/phpstan": "^0.12.23",
         "phpstan/phpstan-strict-rules": "^0.12.2",
         "phpunit/phpunit": "^8.5",
