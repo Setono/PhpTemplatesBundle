@@ -4,6 +4,7 @@
 [![Latest Unstable Version][ico-unstable-version]][link-packagist]
 [![Software License][ico-license]](LICENSE)
 [![Build Status][ico-github-actions]][link-github-actions]
+[![Coverage Status][ico-code-coverage]][link-code-coverage]
 [![Quality Score][ico-code-quality]][link-code-quality]
 
 This bundle integrates the [PHP templates library](https://github.com/Setono/php-templates) into Symfony.
@@ -67,8 +68,10 @@ and `templates/php` for applications.
 [ico-unstable-version]: https://poser.pugx.org/setono/php-templates-bundle/v/unstable
 [ico-license]: https://poser.pugx.org/setono/php-templates-bundle/license
 [ico-github-actions]: https://github.com/Setono/PhpTemplatesBundle/workflows/build/badge.svg
+[ico-code-coverage]: https://img.shields.io/scrutinizer/coverage/g/Setono/PhpTemplatesBundle.svg
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/Setono/PhpTemplatesBundle.svg
 
 [link-packagist]: https://packagist.org/packages/setono/php-templates-bundle
 [link-github-actions]: https://github.com/Setono/PhpTemplatesBundle/actions
+[link-code-coverage]: https://scrutinizer-ci.com/g/Setono/PhpTemplatesBundle/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/Setono/PhpTemplatesBundle
