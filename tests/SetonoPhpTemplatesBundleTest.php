@@ -8,6 +8,7 @@ use Nyholm\BundleTest\BaseBundleTestCase;
 use Nyholm\BundleTest\CompilerPass\PublicServicePass;
 use Setono\PhpTemplates\Engine\Engine;
 use Setono\PhpTemplatesBundle\SetonoPhpTemplatesBundle;
+use Setono\PhpTemplatesBundle\Tests\Bundle\TestBundle;
 
 final class SetonoPhpTemplatesBundleTest extends BaseBundleTestCase
 {
@@ -28,6 +29,9 @@ final class SetonoPhpTemplatesBundleTest extends BaseBundleTestCase
      */
     public function init_bundle(): void
     {
+        $kernel = $this->createKernel();
+        $kernel->addBundle(TestBundle::class);
+
         $this->bootKernel();
 
         $container = $this->getContainer();
