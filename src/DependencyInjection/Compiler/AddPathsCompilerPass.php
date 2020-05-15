@@ -48,7 +48,7 @@ final class AddPathsCompilerPass implements CompilerPassInterface
 
     private static function addProjectPath(string $projectDir, Definition $engine): void
     {
-        $phpTemplatesPath = $projectDir . '/Resources/views/php';
+        $phpTemplatesPath = $projectDir . '/templates/php';
 
         if (!is_dir($phpTemplatesPath) || !is_readable($phpTemplatesPath)) {
             return;

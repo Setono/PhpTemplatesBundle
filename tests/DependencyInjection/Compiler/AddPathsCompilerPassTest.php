@@ -22,16 +22,21 @@ final class AddPathsCompilerPassTest extends AbstractCompilerPassTestCase
      */
     public function it_adds_paths(): void
     {
+        $projectDir = __DIR__ . '/../../App';
+
         $this->setParameter('kernel.bundles', [
             'TestBundle' => TestBundle::class,
         ]);
+        $this->setParameter('kernel.project_dir', $projectDir);
 
         $this->setDefinition('setono_php_templates.engine.default', new Definition());
 
-        $expectedPath = (new TestBundle())->getPath() . '/Resources/views/php';
+        $expectedBundlePath = (new TestBundle())->getPath() . '/Resources/views/php';
+        $expectedProjectPath = $projectDir . '/templates/php';
 
         $this->compile();
 
-        $this->assertContainerBuilderHasServiceDefinitionWithMethodCall('setono_php_templates.engine.default', 'addPath', [$expectedPath]);
+        $this->assertContainerBuilderHasServiceDefinitionWithMethodCall('setono_php_templates.engine.default', 'addPath', [$expectedBundlePath]);
+        $this->assertContainerBuilderHasServiceDefinitionWithMethodCall('setono_php_templates.engine.default', 'addPath', [$expectedProjectPath]);
     }
 }
